@@ -3,8 +3,9 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "BenKon Documentation",
-  tagline: "BenKon Knowledge Base",
+  title: "BenKon Product Support",
+  tagline:
+    "Thanks for purchasing BenKon solutions. Here you will find product FAQs, product user manuals and installation videos for your device.",
   favicon: "img/favicon.png",
 
   // Set the production url of your site here
@@ -66,7 +67,7 @@ const config: Config = {
     // Replace with your project's social card
     // image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "BenKon Documentation",
+      title: "BenKon Support",
       logo: {
         alt: "BenKon Logo",
         src: "img/benkon-logo-symbol.svg",
@@ -76,9 +77,10 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "User Manuals",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/faq", label: "FAQs", position: "left" },
+        { to: "/changelog", label: "Changelog", position: "left" },
         {
           type: "localeDropdown",
           position: "right",
