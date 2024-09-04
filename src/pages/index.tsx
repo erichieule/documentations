@@ -2,7 +2,6 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 
-import styles from "./index.module.css";
 import {
   ArrowRight,
   BookOpen,
@@ -12,6 +11,7 @@ import {
   X,
 } from "@lab2lives/lucide-react";
 import clsx from "clsx";
+import { translate } from "@docusaurus/Translate";
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
@@ -23,21 +23,23 @@ export default function Home(): JSX.Element {
     Icon: LucideIcon;
   }[] = [
     {
-      title: "Documentation",
+      title: translate({ id: "landingPage.links.introduction" }),
       href: "/docs/intro",
-      description: "Dive in to learn all about our product.",
+      description: translate({
+        id: "landingPage.links.introduction.description",
+      }),
       Icon: BookOpen,
     },
     {
-      title: "Frequently Asked Questions",
-      href: "#",
-      description: "Read the latest posts on our blog.",
+      title: translate({ id: "landingPage.links.faq" }),
+      href: "/faq",
+      description: translate({ id: "landingPage.links.faq.description" }),
       Icon: CircleHelp,
     },
     {
-      title: "Chat to us",
-      href: "#",
-      description: "Can’t find what you’re looking for?",
+      title: translate({ id: "landingPage.links.contact" }),
+      href: "mailto: admin@benkon.io",
+      description: translate({ id: "landingPage.links.contact.description" }),
       Icon: MessagesSquare,
     },
   ];
@@ -51,8 +53,12 @@ export default function Home(): JSX.Element {
               <div className="inline-block h-2 w-2 rounded-full bg-green-500" />
               Beta
             </p>
-            <h1 className="text-5xl font-semibold">BenKon Help Center</h1>
-            <p className="text-2xl text-gray-600">We are here for you</p>
+            <h1 className="text-5xl font-semibold">
+              {translate({ id: "landingPage.title" })}
+            </h1>
+            <p className="text-2xl text-gray-600">
+              {translate({ id: "landingPage.subtitle" })}
+            </p>
 
             <div className="flex flex-col pt-10">
               {links.map((link, index) => (
