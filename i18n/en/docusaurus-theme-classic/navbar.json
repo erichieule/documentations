@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "BenKon Support",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "BenKon Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.User Manuals": {
+    "message": "User Manuals",
+    "description": "Navbar item with label User Manuals"
+  }
+}
