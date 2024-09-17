@@ -1,5 +1,7 @@
 ---
 sidebar_position: 1
+slug: test_decap
+title: Test Decap
 ---
 
 # Tutorial Intro
