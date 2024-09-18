@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: test_decap
 title: Test Decap
 ---
-# Tutorial Intro 2
+# Tutorial Intro
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
