@@ -12,6 +12,8 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "static/img"
 public_folder: "/img"
+site_url: https://documentations-rho.vercel.app/
+
 collections:
   - name: "docs"
     label: "Docs"
