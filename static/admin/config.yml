@@ -2,31 +2,22 @@ backend:
   name: github
   branch: main
   repo: erichieule/documentations
+  commit_messages:
+    create: doc:create {{collection}} by {{author-name}} at “{{slug}}”
+    update: doc:update {{collection}} by {{author-name}} at “{{slug}}”
+    delete: doc:delete {{collection}} by {{author-name}} at “{{slug}}”
+    uploadMedia: doc:upload image “{{path}}”
+    deleteMedia: doc:delete image “{{path}}”
 
+publish_mode: editorial_workflow
 media_folder: "static/img"
-public_folder: "/img/"
-
+public_folder: "/img"
 collections:
-  - name: blog
-    label: "blog"
-    folder: blog
-    identifier_field: title
-    extension: md
-    widget: "list"
+  - name: "docs"
+    label: "Docs"
+    folder: "docs"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}"
     fields:
-      - { name: title, label: Title, widget: string }
-      - { name: body, label: Body, widget: markdown }
-      - { name: slug, label: Slug, widget: string }
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-      - label: "Authors"
-        name: "authors"
-        widget: "list"
-        fields:
-          - { name: name, label: Name, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: url, label: URL, widget: string }
-          - { name: imageUrl, label: ImageURL, widget: string }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
